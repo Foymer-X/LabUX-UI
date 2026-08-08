@@ -1,0 +1,5 @@
+Cordial Saludo, Profesor.
+
+El trabajo trataba de editar el HTML con la información de la ciudad a elección, sin embargo quise añadir un archivo CSS para mejorar la estética de la página, si quiere puede hacer revisión de la página sin este archivo si no se requiere para la calificación, pero por lo contrario me gustaría que le echara un vistazo con este archivo incluido.
+
+Muchas gracias.

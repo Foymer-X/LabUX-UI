@@ -1,0 +1,679 @@
+/* =========================================================
+   TURISMO EN SAN JUAN DE PASTO
+   Hoja de estilos para index.html
+   ========================================================= */
+
+/* ---------- Variables ---------- */
+:root {
+    --verde: #045555;
+    --verde-claro: #067274;
+
+    --dorado: #EA9A45;
+    --dorado-claro: #f3be7d;
+
+    --terracota: #C96B4B;
+
+    --crema: #BFE8E8;
+    --blanco: #FFFDF7;
+
+    --texto: #243737;
+    --gris: #607575;
+
+    --sombra: 0 12px 35px rgba(22, 74, 74, 0.15);
+    --radio: 18px;
+}
+
+/* ---------- Configuración general ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--texto);
+    background-image: url("assets/patron-andino.jpg");
+    background-repeat: repeat;
+    background-size: 75px 300px;
+    line-height: 1.6;
+}
+
+/* ---------- Cabecera ---------- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    padding: 14px clamp(20px, 5vw, 80px);
+    background: rgba(231, 255, 246, 0.7);
+    backdrop-filter: blur(8px);
+
+    border-bottom: 1px solid rgba(23, 77, 60, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+header > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 90px;
+    height: 90px;
+
+    background: white;
+    border-radius: 50%;
+
+    padding: 8px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/* ---------- Navegación ---------- */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    position: relative;
+    color: var(--verde);
+    text-decoration: none;
+    font-weight: 650;
+    font-size: 0.95rem;
+
+    padding: 10px 15px;
+    border-radius: 999px;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 5px;
+
+    height: 2px;
+    background: var(--dorado);
+
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+}
+
+nav a:hover {
+    color: var(--verde);
+    background: rgba(213, 167, 42, 0.12);
+    transform: translateY(-2px);
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+/* ---------- Contenido principal ---------- */
+main {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+/* ---------- Título principal ---------- */
+main > h1 {
+    min-height: 420px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 35px 0 70px;
+    padding: 70px 30px;
+
+    text-align: center;
+    color: var(--blanco);
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            rgba(10, 45, 35, 0.62),
+            rgba(10, 45, 35, 0.45)
+        ),
+        url("assets/poster-video.jpg") center / cover no-repeat;
+
+    box-shadow: var(--sombra);
+    overflow: hidden;
+
+    animation: aparecer 0.8s ease both;
+}
+
+/* ---------- Secciones ---------- */
+section {
+    margin: 0 0 90px;
+}
+
+section h2 {
+    display: inline-block;
+    position: relative;
+
+    margin-bottom: 35px;
+    padding: 12px 28px;
+
+    color: #FFFDF7;
+    background: #ea9a45;
+    
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    line-height: 1.2;
+    font-weight: 700;
+
+    border-radius: 8px;
+
+    box-shadow: 6px 6px 0 rgba(0, 181, 178, 0.3);
+}
+
+/* ---------- Contenedor de tarjetas ---------- */
+/*
+   El HTML actual tiene un <div> sin clase que contiene los <article>.
+   Este selector permite diseñarlo sin modificar el HTML.
+*/
+section:first-of-type > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* ---------- Tarjetas ---------- */
+article {
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: var(--blanco);
+    border: 1px solid rgba(23, 77, 60, 0.08);
+    border-radius: var(--radio);
+
+    box-shadow: 0 8px 25px rgba(30, 50, 43, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 18px 40px rgba(30, 50, 43, 0.17);
+}
+
+article img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+
+    transition: transform 0.45s ease;
+}
+
+article:hover img {
+    transform: scale(1.06);
+}
+
+article h3 {
+    padding: 24px 24px 8px;
+
+    color: var(--verde);
+    font-size: 1.25rem;
+    line-height: 1.25;
+}
+
+article p {
+    padding: 0 24px 20px;
+    color: var(--gris);
+    font-size: 0.98rem;
+}
+
+article a {
+    align-self: flex-start;
+
+    margin: auto 24px 24px;
+    padding: 9px 17px;
+
+    color: var(--blanco);
+    background: var(--verde);
+
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+article a:hover {
+    background: var(--terracota);
+    transform: translateX(4px);
+}
+
+/* ---------- Video ---------- */
+section:nth-of-type(2) > div {
+    padding: 12px;
+    background: var(--blanco);
+    border-radius: 22px;
+    box-shadow: var(--sombra);
+}
+
+video {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 620px;
+
+    border-radius: 15px;
+    object-fit: cover;
+    background: #111;
+}
+
+
+
+/* =========================================================
+   NUEVO CONTENIDO
+   Destacados, mapa y pie de página
+   ========================================================= */
+
+/* ---------- Tarjetas de "Destacados de la Semana" ---------- */
+/* El nuevo HTML añade una tercera sección con tarjetas.
+   Se reutiliza exactamente el lenguaje visual de las tarjetas
+   principales, sin alterar el diseño existente. */
+section:nth-of-type(3) > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Las nuevas tarjetas no tienen párrafo, por lo que el enlace
+   se mantiene abajo de forma consistente. */
+section:nth-of-type(3) article {
+    min-height: 100%;
+}
+
+section:nth-of-type(3) article h3 {
+    padding-bottom: 18px;
+}
+
+section:nth-of-type(3) article a {
+    margin-top: auto;
+}
+
+/* ---------- Contenedor del mapa ---------- */
+.map-container {
+    overflow: hidden;
+
+    background: var(--blanco);
+    padding: 12px;
+
+    border-radius: 22px;
+    box-shadow: var(--sombra);
+}
+
+.map-container iframe {
+    display: block;
+
+    width: 100%;
+    min-height: 450px;
+    height: 450px;
+
+    border: 0;
+    border-radius: 15px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    width: 100%;
+    margin-top: 50px;
+    padding: 40px clamp(25px, 6vw, 80px) 30px;
+
+    color: var(--blanco);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(22, 74, 74, 0.98),
+            rgba(57, 122, 107, 0.96)
+        );
+
+    border-top: 5px solid var(--dorado);
+    box-shadow: 0 -10px 30px rgba(22, 74, 74, 0.12);
+
+    /* Logo + contenido en la misma fila */
+    display: grid;
+    grid-template-columns: 200px minmax(0, 980px);
+    justify-content: center;
+    align-items: start;
+
+    gap: 50px;
+}
+
+/* Logo */
+footer .footer-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+    height: 85px;
+
+    padding: 10px;
+
+    background: #FFFDF7;
+    border-radius: 14px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+footer .footer-brand img {
+    width: 190px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Columnas */
+footer > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+footer nav {
+    display: block;
+}
+
+footer nav h3 {
+    position: relative;
+
+    margin-bottom: 15px;
+    padding-bottom: 9px;
+
+    color: var(--dorado-claro);
+    font-size: 1.05rem;
+    font-weight: 750;
+}
+
+footer nav h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 38px;
+    height: 3px;
+
+    background: var(--dorado);
+    border-radius: 5px;
+}
+
+footer nav ul {
+    list-style: none;
+}
+
+footer nav li {
+    margin-bottom: 7px;
+}
+
+footer nav a {
+    display: inline-block;
+
+    padding: 2px 0;
+
+    color: rgba(255, 253, 247, 0.86);
+    text-decoration: none;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+footer nav a::after {
+    display: none;
+}
+
+footer nav a:hover {
+    color: var(--dorado-claro);
+    background: transparent;
+    transform: translateX(5px);
+}
+
+/* ---------- Responsive: nuevas secciones ---------- */
+@media (max-width: 850px) {
+    section:nth-of-type(3) > div {
+        grid-template-columns: 1fr;
+    }
+
+    footer > div {
+        grid-template-columns: 160px 1fr;
+        gap: 30px;
+    }
+
+    footer > div:not(.footer-brand) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+
+    .map-container iframe {
+        min-height: 380px;
+        height: 380px;
+    }
+}
+
+@media (max-width: 600px) {
+    section:nth-of-type(3) > div {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container {
+        padding: 8px;
+    }
+
+    .map-container iframe {
+        min-height: 320px;
+        height: 320px;
+        border-radius: 12px;
+    }
+
+    footer {
+        padding: 40px 24px;
+    }
+
+    footer .footer-brand {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    footer .footer-brand img {
+        max-width: 180px;
+        height: auto;
+    }
+
+    footer > div:not(.footer-brand) {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: center;
+    }
+
+    footer nav h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    footer nav a:hover {
+        transform: none;
+    }
+}
+
+/* ---------- Selección de texto ---------- */
+::selection {
+    color: var(--blanco);
+    background: var(--terracota);
+}
+
+/* ---------- Animaciones ---------- */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- Responsive: tablets ---------- */
+@media (max-width: 850px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    header img {
+        height: 52px;
+        max-width: 150px;
+    }
+
+    nav {
+        gap: 2px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 0.88rem;
+    }
+
+    section:first-of-type > div {
+        grid-template-columns: 1fr;
+    }
+
+    article img {
+        height: 260px;
+    }
+
+    main > h1 {
+        min-height: 350px;
+    }
+
+    footer {
+        grid-template-columns: 160px minmax(0, 1fr);
+        gap: 30px;
+    }
+
+    footer > div:nth-child(2) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* ---------- Responsive: celulares ---------- */
+@media (max-width: 600px) {
+    header {
+        position: relative;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header img {
+        height: 50px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 0.82rem;
+        padding: 7px 8px;
+    }
+
+    main {
+        width: min(100% - 24px, 1180px);
+    }
+
+    main > h1 {
+        min-height: 300px;
+        margin: 20px 0 50px;
+        padding: 40px 20px;
+
+        border-radius: 20px;
+
+        font-size: clamp(2rem, 11vw, 3rem);
+    }
+
+    section {
+        margin-bottom: 60px;
+    }
+
+    section h2 {
+        font-size: 1.65rem;
+    }
+
+    article img {
+        height: 220px;
+    }
+
+    section:last-of-type {
+        padding: 40px 20px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    footer .footer-brand {
+        justify-content: center;
+    }
+
+    footer > div:nth-child(2) {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+
+    footer nav h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* ---------- Accesibilidad ---------- */
+a:focus-visible {
+    outline: 3px solid var(--dorado);
+    outline-offset: 3px;
+}
