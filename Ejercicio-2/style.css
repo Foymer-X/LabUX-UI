@@ -1,0 +1,66 @@
+/* asterisco selector universal*/
+*{
+    /*margenes*/
+    margin: 0;
+    /*relleno*/
+    padding: 0;
+    /*evitar suma del ancho al relleno*/
+    box-sizing: border-box;
+}
+
+/*selector a partir de nombres*/
+body{
+    /*fondo*/
+    background: url(Assets/imagen-back.jpg) center 0 no-repeat;
+    background-size: cover;
+}
+
+h1{
+    font-family: "Uncial Antiqua", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 108px;
+    background: linear-gradient(to top, #ffffff, #ffb700);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+
+.sub-pf{
+    font-family: "Uncial Antiqua", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    color: white;
+    margin: 20px 0 20px 0;
+}
+
+p{
+    font-family: "Mozilla Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    text-align: justify;
+    margin: 20px 0 20px 0;
+}
+
+#destacado {
+    background: linear-gradient(to left, #ffffff, #ffb700);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+img{
+    width: 100%;
+}
+
+main{
+    width: 100%;
+    max-width: 700px;
+    /* el contenedor se puede alinear al centro definiendo los valores de margen de la izquierda y derecha a auto*/
+    margin: 0 auto 0 auto;
+    background-color: rgba(2, 53, 134, 0.698);
+    padding: 0 20px 0 20px;
+}
