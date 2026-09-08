@@ -14,6 +14,7 @@
     --naranja: #FF8009;
     --rojo: #ca1e00;
     --parrafo: #3e4749;
+    --sombras: rgba(0, 126, 172, 0.269);
 }
 
 .hide-element{
@@ -29,6 +30,7 @@ h1{
     font-size: 50px;
     text-align: center;
     
+    
 }
 
 h2{
@@ -37,7 +39,9 @@ h2{
     font-weight: 400;
     font-style: normal;
     color: var(--naranja);
-    font-size: 30px;
+    font-size: 40px;
+    text-align: center;
+    margin: 0 0 20px 0;
 }
 
 h3{
@@ -70,13 +74,6 @@ p{
     border-bottom: 3px solid var(--cyan);
 }
 
-a{
-    font-family: "Noto Sans Tamil Supplement", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-}
-
 .bt-principal{
     font-family: "Noto Sans Tamil Supplement", sans-serif;
     font-weight: 400;
@@ -102,16 +99,62 @@ a{
 .tarjetas{
     display:flex;
     align-content: flex-start;
-    justify-content: center;
+    justify-content: space-between;
 }
+
 
 img{
     width: 100%;
     
 }
+
+/* seccion destacadas */
+
+.destacado{
+    padding: 100px 0;
+}
+
+.vermas{
+    font-family: "Noto Sans Tamil Supplement", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    color: white;
+    transition: 0.1s all linear;
+    background-color: var(--cyan);
+    border-radius: 200px;
+    text-decoration: none;
+    padding: 5px 8px;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.vermas:hover{
+    background-color: var(--naranja);
+    padding: 8px 11px;
+}
+
+.articulo-index{
+    margin: 10px 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px var(--sombras);
+    border-radius: 20px;
+}
+
+/* seccion multimedia */
+
+.multimedia{
+    background-color: var(--naranja);
+}
+
+#h2-multimedia{
+    color: white !important;
+    padding: 30px 0 10px 0;
+}
+
 /* =========================== */
 
-@media (max-width: 600px){
+@media (max-width: 800px){
     #cabezera-web{
         flex-direction: column;
     }
@@ -126,5 +169,7 @@ img{
         background-color: white;
         color: var(--cyan);
     }
-
+    .tarjetas{
+        flex-direction: column;
+    }
 }
