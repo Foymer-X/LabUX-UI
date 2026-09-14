@@ -1,0 +1,301 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+
+    background-image: url("assets/patrón-andino.svg");
+    background-repeat: repeat;
+    background-size: 50px 200px;
+
+    transform: rotate(0deg);
+
+    animation: moverFondo 5s linear infinite;
+
+    z-index: -1;
+    opacity: 60%;
+}
+
+@keyframes moverFondo {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 200px 200px;
+    }
+}
+
+
+:root {
+    --principal: #FC6917;
+    --secundario: #17B8FC;
+    --terciario: #00c87e;
+    --parrafo: #3e4749;
+    --sombras: rgba(32, 32, 81, 0.253);
+}
+
+.hide-element{
+    display: none;
+}
+
+h1{
+    color: var(--principal);
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    text-align: center;
+    
+    
+}
+
+h2{
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--secundario);
+    font-size: 60px;
+    text-align: center;
+    margin: 0 auto 20px auto;
+}
+
+h3{
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--terciario);
+    
+}
+
+
+p{
+    font-family: "Noto Sans Tamil Supplement", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--parrafo);
+    font-size: 15px;
+    text-align: justify;
+}
+
+#cabezera-web{
+    background-color: white;
+    padding: 12px 15px;
+    -ms-flex-align: start;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    /* border-bottom: grosor estilo color; */
+    border-bottom: 3px solid var(--principal);
+}
+
+#logo{
+    width: 50%;
+    height: auto;
+}
+
+.bt-principal{
+    font-family: "Noto Sans Tamil Supplement", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0 20px;
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: var(--principal);
+    padding: 8px 15px;
+    border-radius: 200px;
+    /*animacion por transition: duracion caracteristica animacion*/
+    transition: 0.1s all linear;
+    text-align: center;
+}
+
+.bt-principal:hover{
+    background-color: var(--secundario);
+    padding: 10px 18px;
+    color: white;
+}
+
+.tarjetas{
+    display:flex;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+
+
+img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* seccion destacadas */
+
+.destacado{
+    padding: 100px 0;
+}
+
+.destacado2{
+    padding: 60px 0 10px 0;
+}
+
+.vermas{
+    font-family: "Noto Sans Tamil Supplement", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    color: white;
+    transition: 0.1s all linear;
+    background-color: var(--principal);
+    border-radius: 200px;
+    text-decoration: none;
+    padding: 5px 8px;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.vermas:hover{
+    background-color: var(--terciario);
+    padding: 8px 11px;
+}
+
+.articulo-index{
+    margin: 10px 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px var(--sombras);
+    border-radius: 20px;
+    transition: 0.15s all linear;
+    background-color: white;
+}
+
+.articulo-index:hover{
+    padding: 20px 30px;
+}
+
+/* seccion multimedia */
+
+.multimedia{
+    background-color: var(--principal);
+    box-shadow: 0 0 20px var(--sombras);
+}
+
+#h2-multimedia{
+    color: white !important;
+    padding: 30px 0 10px 0;
+}
+
+.mapa{
+    background-color: var(--terciario);
+    box-shadow: 0 0 20px var(--sombras);
+    margin: 80px 0 0 0;
+}
+
+#titulo-mapa{
+    color: white !important;
+    padding: 30px 0 10px 0;
+}
+
+#mapa-google{
+    width: 100%;
+    height: 400px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin-top: 150px;
+    padding: 40px 0 60px 0;
+    border-top: 3px solid var(--principal);
+}
+
+.links-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.columnas-footer{
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-brand{
+    margin-left: 40px;
+    width: 200px;
+    height: auto;
+}
+
+.lista{
+    font-family: "Noto Sans Tamil Supplement", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    color: white;
+    transition: 0.1s all linear;
+    background-color: var(--principal);
+    border-radius: 200px;
+    text-decoration: none;
+    padding: 5px 8px;
+    display: inline-block;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.lista:hover{
+    background-color: var(--terciario);
+    padding: 8px 11px;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =========================== */
+
+@media (max-width: 750px){
+    #cabezera-web{
+        flex-direction: column;
+        align-items: center;
+    }
+    #cabezera-web > nav{
+        width: 100%;
+    }
+    .bt-principal{
+        display: block;
+        width: 100%;
+        border-radius: 0%;
+        border-bottom: 1px solid var(--principal);
+        background-color: white;
+        color: var(--principal);
+    }
+    .tarjetas{
+        flex-direction: column;
+    }
+    h2{
+        font-size: 40px;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+}

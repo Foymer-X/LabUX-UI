@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Turismo en San Juan de Pasto Ciudad - Sitio Oficial de Información Turística</title>
+    <meta name="description" content="¡¡Que viva Pasto carajo!! Información útil antes de llegar, guías y alojamiento, atractivos turísticos, agenda cultural y mapas de la ciudad.">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil+Supplement&family=Unbounded&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Cabecera principal del sitio -->
+    <header id="cabezera-web">
+        <!-- Logo del sitio, href -> dirección a donde voy al dar click -->
+        <a href="index.html" aria-label="Ir a la página de inicio de Turismo en San Juan de Pasto">
+            <img id="logo" src="assets/cyt-logo-6.webp" alt="Logotipo oficial de Turismo Pasto Ciudad">
+        </a>
+
+        <!-- Navegador principal -->
+        <nav role="navigation" aria-label="Menú principal">
+            <a href="" class="bt-principal">Qué hacer</a>
+            <a href="" class="bt-principal">Antes de llegar</a>
+            <a href="" class="bt-principal">Información</a>
+            <a href="" class="bt-principal">Contacto</a>
+        </nav>
+
+    </header>
+
+    <!-- Contenido principal del sitio -->
+    <main role="main">
+
+        <h1 class="hide-element" aria-hidden="true">Portal de Turismo Oficial de la Ciudad de San Juan de Pasto</h1>
+
+        <!-- Actividades destacadas -->
+        <section class="destacado">
+            <h2>Actividades Destacadas en la Ciudad</h2>
+
+            <div class="tarjetas">
+                <!-- Tarjeta -->
+                <article class="articulo-index" role="article">
+                    <img src="assets/lajas.jpg" alt="Iglesia de las Lajas">
+                    <h3>Lugares por Descubrir</h3>
+                    <p>En este buscador, vas a encontrar las mayores maravillas de Pasto, entre estas la Iglesia de Las Lajas.</p>
+                    <a class="vermas" href="" aria-label="ir al buscador de maravillas de San Juan de Pasto">ver más</a>
+                </article>
+
+                <!-- Tarjeta -->
+                <article class="articulo-index" role="article">
+                    <img src="assets/cuy.jpg" alt="cuy asado">
+                    <h3>¿Cúal es el Sabor de la Gastronomía Pastusa?</h3>
+                    <p>En Pasto vas a encontrar platos típicos y comida de todo el mundo.</p>
+                    <a class="vermas" href="" aria-label="Ver información sobre gastronomía pastusa">ver más</a>
+                </article>
+
+                <!-- Tarjeta -->
+                <article class="articulo-index" role="article">
+                    <img src="assets/el-patio.jpg" alt="El patio, container park">
+                    <h3>Mercados y Patios Gastronómicos</h3>
+                    <p>Conoce los patios y mercados donde podés disfrutar de la mejor gastronomía de la ciudad.</p>
+                    <a class="vermas" href="" aria-label="Ver más información sobre los patios gastronómicos de la ciudad">ver más</a>
+                </article>
+            </div>
+
+        </section>
+        <!-- FIN Actividades destacadas -->
+
+        <!-- Contenido Multimedia -->
+        <section class="multimedia">
+            <h2 id="h2-multimedia">Experiencia en San Juan de Pasto</h2>
+            <!-- Video Pasto -->
+            <div>
+                <video id="video" controls autoplay loop width="100%" height="auto" poster="assets/poster-video.jpg">
+                    <source src="assets/pasto-video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+        <!-- FIN Contenido Multimedia -->
+        
+        <!-- Contenidos Destacados -->
+        <section>
+            <h2 class="destacado2">Destacados de la Semana</h2>
+            <div class="tarjetas">
+                    
+                <!-- Tarjeta Destacada 1 -->
+                <article class="articulo-index" role="article">
+                    <img src="assets/museo-oro.jpg" alt="Fachada iluminada del Museo del Oro Nariño">
+                    <h3>Circuitos de Museos Gratuitos</h3>
+                    <a class="vermas" href="" aria-label="Ver más sobre los circuitos de museos gratuitos">Ver Más</a>
+                </article>
+
+                    <!-- Tarjeta Destacada 2 -->
+                <article class="articulo-index" role="article">
+                     <img src="assets/corota.jpg" alt="Vista aérea de la Laguna de la Cocha">
+                    <h3>Maravillas de la Naturaleza que no te Puedes Perder</h3>
+                    <a class="vermas" href="" aria-label="Ver más sobre los espacios naturales imperdibles">Ver Más</a>
+                </article>
+
+                <!-- Tarjeta Destacada 3 -->
+                <article class="articulo-index" role="article">
+                    <img src="assets/bautista.jpg" alt="Iglesia de San Juan Bautista">
+                    <h3>Arquitectura e Historia Pastusa</h3>
+                    <a class="vermas" href="" aria-label="Ver más sobre la arquitectura e historia pastusa">Ver Más</a>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- Ubicación Geográfica -->
+        <section class="mapa" aria-labelledby="titulo-mapa">
+            <h2 id="titulo-mapa">Ubicación y Centros de Atención al Turista</h2>
+            <div class="map-container">
+                <iframe id="mapa-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.460694277527!2d-77.27890495182665!3d1.2149234493492123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ed5a44a1d4493%3A0xb4fceda8df53d216!2sCasa%20Blanca%20Hospedaje%20SAS!5e0!3m2!1ses-419!2sco!4v1789358514301!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Mapa interactivo de la Ciudad de San Juan de Pasto con la ubicación de la Plaza de Nariño.>
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+
+        <!-- Pie de Página Institucional -->
+    <footer role="contentinfo">
+
+            <!-- Identificador Institucional del Footer -->
+            <div class="footer-brand">
+                <img src="assets/logo_pasto.png" alt="Logotipo oficial del Gobierno de la Ciudad de San Juan de Pasto">
+            </div>
+
+            <!-- Columnas de Enlaces del Footer -->
+            <div class="links-footer">
+                
+                <!-- Lista 1: Prestadores -->
+                <nav class="columnas-footer">
+                    <h3 id="footer-prestadores">Prestadores</h3>
+                    <ul>
+                        <li><a class="lista" href="">Hoteles y alojamientos</a></li>
+                        <li><a class="lista" href="">Operadores turísticos</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Lista 2: Profesionales -->
+                <nav class="columnas-footer">
+                    <h3 id="footer-profesionales">Profesionales</h3>
+                    <ul>
+                        <li><a class="lista" href="">Alcaldía de Pasto</a></li>
+                        <li><a class="lista" href="">Gobernación de Nariño</a></li>
+                        <li><a class="lista" href="">Cámara de Comercio de Pasto</a></li>
+                        <li><a class="lista" href="">Universidad de Nariño</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Lista 3: Interacción y Contacto -->
+                <nav class="columnas-footer">
+                    <h3 id="footer-contacto">Contacto e Interacción</h3>
+                    <ul>
+                        <li><a class="lista" href="">Contactate con nosotros</a></li>
+                        <li><a class="lista" href="" aria-label="Ir al formulario para suscribirse al Newsletter oficial">Suscríbete al Newsletter</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+    </footer>
+
+</body>
+
+</html>
