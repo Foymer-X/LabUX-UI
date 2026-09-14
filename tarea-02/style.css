@@ -8,46 +8,13 @@
 
 }
 
-body {
-    margin: 0;
-    position: relative;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    width: 200%;
-    height: 200%;
-
-    background-image: url("assets/patrón-andino.svg");
-    background-repeat: repeat;
-    background-size: 50px 200px;
-
-    transform: rotate(0deg);
-
-    animation: moverFondo 5s linear infinite;
-
-    z-index: -1;
-    opacity: 60%;
-}
-
-@keyframes moverFondo {
-    from {
-        background-position: 0 0;
-    }
-
-    to {
-        background-position: 200px 200px;
-    }
-}
-
 
 :root {
     --principal: #FC6917;
     --secundario: #17B8FC;
     --terciario: #00c87e;
     --parrafo: #3e4749;
-    --sombras: rgba(32, 32, 81, 0.253);
+    --sombras: rgba(32, 32, 81, 0.461);
 }
 
 .hide-element{
@@ -86,7 +53,6 @@ h3{
     
 }
 
-
 p{
     font-family: "Noto Sans Tamil Supplement", sans-serif;
     font-weight: 400;
@@ -106,11 +72,45 @@ p{
     justify-content: space-between;
     /* border-bottom: grosor estilo color; */
     border-bottom: 3px solid var(--principal);
+    box-shadow: 0 0 20px var(--sombras);
 }
 
 #logo{
     width: 50%;
     height: auto;
+}
+
+body {
+    margin: 0;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+
+    background-image: url("assets/patrón-andino.svg");
+    background-repeat: repeat;
+    background-size: 50px 200px;
+
+    transform: rotate(0deg);
+
+    animation: moverFondo 5s linear infinite;
+
+    z-index: -1;
+    opacity: 60%;
+}
+
+@keyframes moverFondo {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 200px 200px;
+    }
 }
 
 .bt-principal{
@@ -215,7 +215,7 @@ img{
 
 #mapa-google{
     width: 100%;
-    height: 400px;
+    height: 800px;
 }
 
 footer{
@@ -225,6 +225,7 @@ footer{
     margin-top: 150px;
     padding: 40px 0 60px 0;
     border-top: 3px solid var(--principal);
+    box-shadow: 0 0 10px var(--sombras);
 }
 
 .links-footer{
@@ -297,5 +298,18 @@ ul {
     footer{
         flex-direction: column;
         align-items: center;
+    }
+    .links-footer{
+        flex-direction: column;
+        align-items: start;
+    }
+    .footer-brand{
+        margin-left: 0;
+    }
+    .columnas-footer{
+        margin: 0;
+    }
+    #mapa-google{
+        height: 400px;
     }
 }
