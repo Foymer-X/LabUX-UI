@@ -1,0 +1,35 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="393" height="630" viewBox="0 0 393 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Mask group">
+<mask id="mask0_0_29" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="393" height="630">
+<rect id="Rectangle 57" x="1.39804e-05" width="393" height="630" fill="#5172D8"/>
+</mask>
+<g mask="url(#mask0_0_29)">
+<g id="Vector 3" filter="url(#filter0_g_0_29)">
+<path d="M-77.3945 235.395C-103.567 223.098 -155.686 181.836 -171.869 206.966L-172 384L413 384L413 206.966C378.292 177.444 294.84 206.966 252.175 206.966C198.844 206.966 138.691 183.5 100 183.5C61.3088 183.5 -44.6788 250.766 -77.3945 235.395Z" fill="#2D54C8"/>
+</g>
+<g id="Vector 4" filter="url(#filter1_g_0_29)">
+<path d="M-72.5162 199C-131.122 199 -166.702 273.395 -183 285.474L-183 797L406 797L406 321.713C371.047 307.522 290.4 226.273 247.434 226.273C193.726 226.273 115.646 279.141 76.6819 279.141C37.7174 279.141 -20.3534 199 -72.5162 199Z" fill="#24429E"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_g_0_29" x="-176" y="179.5" width="593" height="208.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.25 0.25" numOctaves="3" seed="2786" />
+<feDisplacementMap in="shape" scale="8" xChannelSelector="R" yChannelSelector="G" result="displacedImage" />
+<feMerge result="effect1_texture_0_29">
+<feMergeNode in="displacedImage"/>
+</feMerge>
+</filter>
+<filter id="filter1_g_0_29" x="-187" y="195" width="597" height="606" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.25 0.25" numOctaves="3" seed="2786" />
+<feDisplacementMap in="shape" scale="8" xChannelSelector="R" yChannelSelector="G" result="displacedImage" />
+<feMerge result="effect1_texture_0_29">
+<feMergeNode in="displacedImage"/>
+</feMerge>
+</filter>
+</defs>
+</svg>
