@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tower Heroes · Guía en Español</title>
+  <meta name="description" content="Guía en español de Tower Heroes: clases de torres, estrategias recomendadas y noticias del juego.">
+  <link rel="icon" href="assets/img/logo-tower-heroes.webp">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <!-- Íconos del sitio (torre, enemigo, logro, mapa). Se dibujan una sola vez aquí
+       y se reutilizan con <use>. Su color sale de "color" en el CSS (fill: currentColor). -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-torre" viewBox="0 0 44.7589 55"><path d="M43.9808 55L0.196412 54.9845L0 47.091L6.02329 42.2922L5.90775 17.209L0.793349 8.91359L0.450591 0C3.60858 0.0734106 5.93471 0.220232 8.98872 0.0309097L9.31993 5.4092L17.0955 5.32034C17.0108 3.53144 16.8567 2.14436 17.2804 0.525465L27.1241 0.444327L27.3628 5.34738L35.1692 5.30102C35.1962 3.50439 34.9343 2.05936 35.4196 0.513874L44.7087 0.482965C44.3005 3.72076 45.3095 7.16333 44.2735 10.1577L39.136 17.9431L39.0936 43.4977L44.1002 47.2764L43.9808 55ZM27.2897 31.4468L27.3166 21.3007C27.3243 18.6154 24.8249 17.6417 22.5065 17.6804C19.8761 17.7267 17.4229 18.9052 17.3998 21.8416L17.3227 31.5472L27.2897 31.4468Z"/></symbol>
+    <symbol id="i-enemigo" viewBox="0 0 53.0001 45"><path d="M52.9803 7.06L53.0001 11.0333C52.3459 11.4733 52.3955 12.5233 51.8899 13.19L49.2796 16.6233C50.0726 17.9833 50.446 19.2833 50.598 20.7667C50.9251 23.94 51.5826 26.9867 51.4835 30.2267C51.3579 32.85 50.8425 35.2967 50.4592 37.8733C48.285 41.26 45.0799 43.4267 41.1016 44.04C39.575 44.2733 38.0617 45 36.5054 45H28.4001C25.0198 45.0067 20.3675 43.23 17.354 41.2767C16.1579 40.5 15.0311 38.7667 14.1125 37.7267C13.6202 35.11 12.8702 32.53 13.0717 29.9067L13.9011 19.02C13.9308 18.63 14.3901 17.9633 14.0465 17.7133C13.8416 17.5667 13.2435 17.09 12.89 17.26L1.98599 22.4733C1.36149 22.77 0.819591 22.2667 0.485862 22.08C0.205002 21.9267 -0.2642 20.9067 0.188481 20.68L11.9152 14.85L11.0066 12.01C11.261 8.84333 14.8494 5.00667 17.1194 4.02667L23.2884 1.36333C25.7699 0.29 31.8332 -0.04 34.2981 1.11333C36.4558 2.12333 37.5132 4.44667 38.0055 6.69C40.3053 6.74 42.453 7.56333 44.1646 9.25667C46.0943 6.27667 46.9236 3.15 48.6584 0L52.5342 5.19667C52.8977 5.68333 52.5772 6.69667 52.9869 7.05667L52.9803 7.06Z"/></symbol>
+    <symbol id="i-logro" viewBox="0 0 45.403 51"><path d="M15.5218 50.9969C15.1617 50.9343 14.8925 50.9624 14.6796 50.9969L9.46056 42.885L1.6336 43.4548C0.988655 43.5018 0.547215 43.1543 0.293621 42.8036C0.0400276 42.453 -0.138427 41.9176 0.143344 41.4542L7.71358 28.881C4.14449 23.4084 3.45571 16.8275 6.28908 10.6129C9.57327 3.4058 17.9512 -1.07122 25.5465 0.221792C31.8206 1.28939 36.9989 5.30932 39.4003 10.4908C42.3651 16.8901 41.6106 23.615 37.7942 29.2066L45.1609 41.0065C45.4333 41.4417 45.474 41.88 45.2924 42.2776C45.1452 42.6001 44.7257 42.9257 44.206 42.9539L35.731 43.4016L31.9114 50.1954C31.6516 50.6587 31.1569 50.7401 30.7249 50.6901C30.2928 50.64 30.0236 50.4083 29.723 49.9387L22.5692 38.7148L16.9431 49.2217C16.5518 49.9543 16.2262 50.5742 15.5186 51L15.5218 50.9969ZM38.2669 18.4774C38.2669 9.97419 31.3792 3.0802 22.8791 3.0802C14.379 3.0802 7.4913 9.97419 7.4913 18.4774C7.4913 26.9806 14.379 33.8746 22.8791 33.8746C31.3792 33.8746 38.2669 26.9806 38.2669 18.4774ZM15.2494 47.2869L20.7909 36.7674C16.1573 36.1131 12.4192 34.2503 9.34159 30.8659L3.3117 40.9345L10.7348 40.5087L15.2463 47.2838L15.2494 47.2869ZM34.3754 41.041L42.0771 40.6715L36.1818 31.1383C32.9133 34.5008 28.9215 36.4168 24.2504 36.8113L30.8156 47.193L34.3754 41.041Z"/><path d="M23.0924 24.4948L16.8027 28.8998C16.4583 29.1409 15.8854 29.0375 15.5754 28.8654C15.2905 28.7057 14.9054 28.2235 15.0745 27.6913L17.3537 20.4467L11.4772 16.2514C11.042 15.9415 10.8824 15.5126 10.9043 15.068C10.9231 14.6485 11.28 13.991 11.9249 13.9816L19.4701 13.8689L21.7117 7.00934C21.862 6.54599 22.3442 6.33309 22.6792 6.27674C23.1081 6.20473 23.6967 6.37692 23.8908 6.93734L26.289 13.8845L33.6745 13.8658C34.2944 13.8658 34.8016 14.1319 35.0301 14.6078C35.2399 15.0429 35.1866 15.8006 34.6419 16.1888L28.5463 20.5187L30.8067 27.1466C31.0196 27.7727 30.8818 28.3237 30.4623 28.6712C30.0647 29 29.4448 29.0532 28.9219 28.6775L23.1018 24.4948H23.0924Z"/></symbol>
+    <symbol id="i-mapa" viewBox="0 0 47 47.0019"><path d="M46.944 23.0999L47 45.1368C47.0035 47.1862 43.4925 47.1827 42.3361 46.8148C39.2666 45.8348 36.0393 45.154 33.1415 43.6686C31.9115 43.036 31.0846 41.695 29.7005 42.3723C28.3164 43.0497 27.5875 43.9643 27.7908 45.7179L24.6581 46.7495L13.2629 46.8664C11.8718 46.1237 10.7855 44.7999 9.27178 44.3598C5.3227 43.2113 2.88037 47.5334 1.05475 46.7082C0.571192 46.4881 0.045583 45.9518 0.0420789 45.1025L3.01689e-05 2.16669C3.01689e-05 1.46181 -0.010482 1.02857 0.360949 0.58501C0.606233 0.289304 1.13885 0.0554903 1.75907 0.0554903H16.2904C16.9807 1.73689 13.8095 2.45896 13.9112 5.46759C14.0233 8.83038 19.8926 7.58567 23.6945 4.84179C24.3603 6.33752 25.3729 7.22807 26.6835 7.2487C27.8013 7.26933 29.746 7.06303 29.8827 5.47447C30.0193 3.88591 30.2716 0.316812 32.4757 0.268673L45.255 0.000475353C46.1415 -0.0201553 46.965 0.633148 46.951 1.49276L46.8564 7.19369L44.4 13.8161C43.6852 17.2683 46.9405 21.7108 46.944 23.0965V23.0999ZM36.3407 14.0912C36.9889 14.2803 37.7528 16.1508 39.0773 15.9995C39.8552 15.9101 40.4825 15.3153 40.549 14.5347C40.6717 13.1319 38.5903 12.317 38.5728 11.5158C38.5552 10.7146 40.7172 9.82409 40.2442 8.19427C40.0199 7.42062 39.242 7.05959 38.4676 7.15242C37.1501 7.31059 36.7086 9.11921 36.0428 9.05732C35.6609 9.02293 35.0336 7.41031 33.611 7.57879C32.8576 7.66819 32.353 8.1874 32.276 8.796C32.0692 10.4636 34.0455 11.0447 33.7722 11.7874C33.5374 12.427 31.8169 13.2144 32.4862 14.7617C32.6719 15.1881 33.2185 15.6247 33.9229 15.6488C35.2929 15.6901 35.6924 13.8986 36.3337 14.0843L36.3407 14.0912ZM30.4679 18.5405L31.7924 16.921C32.2514 16.3571 32.0972 15.6041 31.6592 15.2878C31.2878 15.0196 30.4644 14.8511 30.1104 15.2878L28.5757 17.1755C28.1482 17.7015 28.4005 18.3514 28.6948 18.6162C29.1398 19.0219 29.9948 19.1251 30.4714 18.544L30.4679 18.5405ZM18.5891 19.6924C19.2864 19.8024 19.7945 19.3898 19.9802 18.85C20.1449 18.372 19.9031 17.5812 19.2233 17.4574L16.6548 16.9864C15.8314 16.8351 15.2077 17.3955 15.1446 18.0626C15.0079 19.5308 16.5883 19.3795 18.5891 19.6924ZM26.1368 19.7749C26.7886 19.0185 26.6274 18.1485 25.9756 17.674C24.8649 17.5606 23.8872 17.5675 22.7659 17.674C22.0055 18.1761 21.981 19.242 22.7309 19.8162C23.8452 20.0466 24.9139 20.0741 26.1368 19.7784V19.7749ZM11.1114 22.4019L12.8039 20.4832C13.2489 19.9778 13.1718 19.3761 12.8985 19.0047C12.5971 18.5955 11.7246 18.2448 11.2971 18.6953L9.14213 20.9543C8.61652 21.5045 8.83728 22.3262 9.21922 22.6529C9.78337 23.1343 10.5262 23.0655 11.1114 22.4019ZM9.31032 26.8272L9.55561 24.881C9.64321 24.1727 9.21922 23.6947 8.70062 23.4988C8.18202 23.3028 7.3901 23.4816 7.21139 24.1486C6.9626 25.0701 6.92406 26.0776 6.95209 27.0575C6.97312 27.7968 7.60034 28.0925 8.1715 28.0444C8.67609 28.0031 9.1982 27.7143 9.31032 26.8306V26.8272ZM9.55211 28.8386C8.97394 28.7699 8.22757 29.1034 8.168 29.8289C8.10843 30.5544 9.57313 32.6484 10.6243 32.6141C11.0799 32.6003 11.6125 32.284 11.7001 31.6238C11.8017 30.8673 10.3861 28.9384 9.55211 28.8386ZM16.5918 34.9797C16.774 34.5361 16.7039 33.8072 16.0942 33.4943C14.2686 32.5625 12.6917 32.0192 12.2362 33.1023C12.089 33.4496 12.0435 34.0685 12.4114 34.378C13.7114 35.468 16.1082 36.1522 16.5883 34.9797H16.5918ZM20.7476 37.6273C21.5395 37.8817 22.0476 37.1906 22.1597 36.7058C22.2368 36.3654 22.1843 35.7224 21.6621 35.5367L19.0902 34.6152C18.2912 34.3298 17.65 34.7906 17.5168 35.4886C17.4292 35.9425 17.5799 36.6164 18.2492 36.8296L20.7476 37.6273ZM25.0015 40.2783L24.2762 38.7792C23.9503 38.1018 23.4527 37.8336 22.8255 37.9471C22.2789 38.0433 21.7988 38.5901 21.9495 39.3224C22.2613 40.8629 23.3266 42.3104 24.3603 41.8566C24.9209 41.609 25.3449 40.9935 25.0015 40.2783ZM23.1023 44.6245C23.4878 44.0675 23.3196 43.2766 22.9306 42.9809C21.9144 42.2004 20.9193 43.2629 19.812 44.7483C19.4231 45.2675 19.7314 45.8899 20.0678 46.1409C21.0489 46.8733 22.1072 46.0652 23.1023 44.6245Z"/></symbol>
+  </svg>
+
+
+  <!--HEADER-->
+  <header class="cabecera" id="cabecera">
+    <div class="lienzo cabecera__lienzo">
+      <a class="cabecera__logo" href="#inicio">
+        <img src="assets/img/logo-tower-heroes.webp" alt="Logotipo de Tower Heroes" width="140" height="73">
+      </a>
+      <p class="cabecera__titulo">Guía en Español</p>
+
+      <!--Decoración del paisaje (desktop)-->
+      <div class="cabecera__deco" aria-hidden="true">
+        <svg class="icono icono--torre deco deco--t1" aria-hidden="true" focusable="false"><use href="#i-torre"/></svg>
+        <svg class="icono icono--enemigo deco deco--e1" aria-hidden="true" focusable="false"><use href="#i-enemigo"/></svg>
+        <svg class="icono icono--enemigo deco deco--e2" aria-hidden="true" focusable="false"><use href="#i-enemigo"/></svg>
+        <svg class="icono icono--enemigo deco deco--e3" aria-hidden="true" focusable="false"><use href="#i-enemigo"/></svg>
+        <svg class="icono icono--torre deco deco--t2" aria-hidden="true" focusable="false"><use href="#i-torre"/></svg>
+      </div>
+
+      <!-- Menú desplegable móvil-->
+      <a class="menu-boton menu-boton--abrir" href="#menu" aria-label="Abrir menú">
+        <svg class="icono icono--torre" aria-hidden="true" focusable="false"><use href="#i-torre"/></svg>
+      </a>
+      <a class="menu-boton menu-boton--cerrar" href="#cabecera" aria-label="Cerrar menú">
+        <svg class="icono icono--torre" aria-hidden="true" focusable="false"><use href="#i-torre"/></svg>
+      </a>
+
+      <nav class="menu" id="menu" aria-label="Secciones de la página">
+        <a class="boton-icono" href="#inicio">
+          <span>Presentación</span>
+          <svg class="icono icono--mapa" aria-hidden="true" focusable="false"><use href="#i-mapa"/></svg>
+        </a>
+        <a class="boton-icono" href="#clases">
+          <span>Clases de Torres</span>
+          <svg class="icono icono--torre" aria-hidden="true" focusable="false"><use href="#i-torre"/></svg>
+        </a>
+        <a class="boton-icono" href="#estrategias">
+          <span>Estrategias Tips</span>
+          <svg class="icono icono--enemigo" aria-hidden="true" focusable="false"><use href="#i-enemigo"/></svg>
+        </a>
+        <a class="boton-icono" href="#noticias">
+          <span class="solo-escritorio">Notas recientes</span>
+          <span class="solo-movil">Noticias Nuevas</span>
+          <svg class="icono icono--logro" aria-hidden="true" focusable="false"><use href="#i-logro"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!--PRESENTACIÓN-->
+    <section class="presentacion" id="inicio">
+      <div class="lienzo presentacion__lienzo">
+        <!-- Fondo presentación (PC y móvil) -->
+        <picture class="presentacion__fondo">
+          <source media="(min-width: 1200px)" srcset="assets/img/presentacion-fondo-pc.webp">
+          <img src="assets/img/presentacion-fondo-movil.webp" alt="Héroe mago de Tower Heroes con su gran espada, sobre un bosque nocturno desenfocado">
+        </picture>
+        <div class="presentacion__personaje2">
+          <img src="assets/img/presentacion-heroe-chef.webp" alt="Héroe chef de Tower Heroes con gorro blanco, bufanda roja y cucharón">
+        </div>
+
+        <h1 class="presentacion__titulo">¡Bienvenido a Tower Heroes!</h1>
+        <svg class="icono icono--mapa presentacion__icono" aria-hidden="true" focusable="false"><use href="#i-mapa"/></svg>
+
+        <!-- video: tráiler de Tower Heroes -->
+        <video class="presentacion__video" controls preload="metadata" playsinline
+               poster="assets/img/trailer-portada.webp" aria-label="Trailer de Tower Heroes">
+          <source src="assets/video/tower-heroes-trailer.mp4" type="video/mp4">
+          Tu navegador no puede reproducir este video.
+        </video>
+
+        <p class="presentacion__texto">
+          Tower Heroes es un videojuego de género tower defense desarrollado en la plataforma de Roblox, aquí deberás defender tu base de los enemigos con ayuda de tus torres, o en este caso, <strong>HEROES.</strong>
+          <br><br>
+          Cada heroe tiene sus propias ventajas y desventajas, es por eso que, si quieres empezar a jugar, debes conocer las diferentes clases, estrategias, tips y noticias para emprender tu viaje de heroe.
+        </p>
+      </div>
+    </section>
+
+    <!-- CLASES DE TORRE -->
+    <section class="clases" id="clases">
+      <div class="clases__fondo" aria-hidden="true">
+        <img class="clases__capa clases__capa--1" src="assets/img/clases-fondo-capa-1.svg" alt="">
+        <img class="clases__capa clases__capa--2" src="assets/img/clases-fondo-capa-2.svg" alt="">
+        <img class="clases__capa clases__capa--3" src="assets/img/clases-fondo-capa-3.svg" alt="">
+        <img class="clases__capa clases__capa--4" src="assets/img/clases-fondo-capa-4.svg" alt="">
+        <img class="clases__capa clases__capa--movil" src="assets/img/clases-fondo-movil.svg" alt="">
+      </div>
+      <div class="lienzo clases__lienzo">
+        <h2 class="titulo-seccion clases__titulo">
+          <svg class="icono icono--torre" aria-hidden="true" focusable="false"><use href="#i-torre"/></svg>
+          <span>Clases de Torres</span>
+          <svg class="icono icono--torre" aria-hidden="true" focusable="false"><use href="#i-torre"/></svg>
+        </h2>
+
+        <div class="clases__grid">
+          <article class="tarjeta-clase tarjeta-clase--melee">
+            <div class="tarjeta-clase__arte">
+              <img class="p1" src="assets/img/clase-melee-yasuke.webp" alt="Héroe melee Yasuke: guerrera con cuernos, alas de murciélago y una sierra">
+              <img class="p2" src="assets/img/clase-melee-mako.webp" alt="Héroe melee Mako: tiburón gris dentro de una cubeta">
+              <img class="p3" src="assets/img/clase-melee-chef.webp" alt="Héroe melee Chef: con gorro blanco y sartén">
+              <img class="p4" src="assets/img/heroe-hotdogfrank.webp" alt="Héroe melee Hot Dog Frank">
+              <img class="p5" src="assets/img/clase-melee-volt.webp" alt="Héroe melee Volt: destello luminoso en dispositivo de control">
+            </div>
+            <div class="tarjeta-clase__caja">
+              <h3 class="tarjeta-clase__titulo"><span class="ico" aria-hidden="true">&#xF0E3;</span> Melee <span class="ico" aria-hidden="true">&#xF0E3;</span></h3>
+              <p>Estos heroes se caracterizan por tener un rango de alcance limitado, pero inflingen un <strong>daño devastador</strong>.</p>
+              <p>Suelen encajar con heroes como El Goblino y Byte, deteniendo a los enemigos y permitiendoles seguir infligiendo grandes daños.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta-clase tarjeta-clase--rango">
+            <div class="tarjeta-clase__arte">
+              <div class="p1 rotada"><img src="assets/img/clase-rango-lure.webp" alt="Héroe de rango Lure: caballero con armadura plateada"></div>
+              <img class="p2" src="assets/img/clase-rango-scientist.webp" alt="Héroe de rango Scientist: cañón negro con energía rosada">
+              <div class="p3 recorte"><img src="assets/img/clase-rango-branch.webp" alt="Héroe de rango Branch: planta con bufanda verde"></div>
+              <img class="p4" src="assets/img/clase-rango-sodapop.webp" alt="Héroe de rango Sodapop: ratón lila con una bebida">
+              <img class="p5" src="assets/img/clase-rango-mago.webp" alt="Héroe de rango Mago: con sombrero lila y gafas redondas">
+            </div>
+            <div class="tarjeta-clase__caja">
+              <h3 class="tarjeta-clase__titulo"><span class="ico" aria-hidden="true">&#xE2CA;</span> Rango <span class="ico" aria-hidden="true">&#xE2CA;</span></h3>
+              <p>Estos heroes son una de las clases más usadas debido a tener un daño por segundo moderado, pero con un alcance tan amplio que no hay margen de error.</p>
+              <p>Su <strong>concistencia</strong> frenta a enemigos comunes como a jefes les permite tomar un rol escencial en etapas más avanzadas de la partida.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta-clase tarjeta-clase--invocador">
+            <div class="tarjeta-clase__arte">
+              <div class="p1 rotada"><img src="assets/img/clase-invocador-hayes.webp" alt="Héroe invocador Hayes: espantapájaros con sombrero de copa morado"></div>
+              <img class="p2" src="assets/img/clase-invocador-slimeking.webp" alt="Héroe invocador Slime King: gota azul con corona dorada">
+              <div class="p3 recorte"><img src="assets/img/clase-invocador-kartkid.webp" alt="Héroe invocador Kart Kid: gato blanco en una carreta de madera"></div>
+              <div class="p4 rotada"><img src="assets/img/clase-invocador-breezy.webp" alt="Héroe invocador Breezy: abeja reina blanca con corona"></div>
+              <img class="p5" src="assets/img/clase-invocador-stella.webp" alt="Héroe invocador Stella: ajolote pintor con boina y pincel">
+            </div>
+            <div class="tarjeta-clase__caja">
+              <h3 class="tarjeta-clase__titulo"><span class="ico" aria-hidden="true">&#xF21D;</span> Invocador <span class="ico" aria-hidden="true">&#xF21D;</span></h3>
+              <p>Esta clase es la más peculiar, pues su principal fuente de daño se basa en invocar pequeños <strong>ayudantes</strong> en el campo de batalla que se encarguen de combatir con los enemigos.</p>
+              <p>Heroes como Buzzer y Discount Dog son escenciales para exprimir el potencial completo de esta clase.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta-clase tarjeta-clase--soporte">
+            <div class="tarjeta-clase__arte">
+              <div class="p1 rotada"><div class="recorte"><img src="assets/img/heroe-spectre.webp" alt="Héroe de soporte Spectre: demonio blanco tocando una guitarra eléctrica roja"></div></div>
+              <img class="p2" src="assets/img/clase-soporte-maitake.webp" alt="Héroe de soporte Maitake: hechicera de cabello negro con una poción">
+              <img class="p3" src="assets/img/clase-soporte-balloonpal.webp" alt="Héroe de soporte Balloon Pal: fantasma con audífonos sosteniendo globos">
+              <img class="p4" src="assets/img/clase-soporte-discountdog.webp" alt="Héroe de soporte Discount Dog: perro de orejas largas con pañuelo verde">
+              <img class="p5" src="assets/img/clase-soporte-lemonadecat.webp" alt="Héroe de soporte Lemonade Cat: gato blanco con un platillo">
+            </div>
+            <div class="tarjeta-clase__caja">
+              <h3 class="tarjeta-clase__titulo"><span class="ico" aria-hidden="true">&#xF0A6;</span> Soporte <span class="ico" aria-hidden="true">&#xF0A6;</span></h3>
+              <p>Por sí mismos no hacen mucho, pero su potencial se desata junto a otros heroes, es por eso que son los heroes <strong>más importantes</strong> del juego.</p>
+              <p>Aumentar características, optimizar maná y desbloquear el verdadero potencial de los heroes es su trabajo. ¡Aprovéchalo al máximo!</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTRATEGIAS -->
+    <section class="estrategias" id="estrategias">
+
+      <!-- Escritorio: carrusel solo con CSS -->
+      <div class="carrusel solo-escritorio">
+        <input class="carrusel__radio" type="radio" name="estrategia" id="estrategia-1">
+        <input class="carrusel__radio" type="radio" name="estrategia" id="estrategia-2">
+        <input class="carrusel__radio" type="radio" name="estrategia" id="estrategia-3">
+
+        <div class="lienzo carrusel__lienzo">
+          <h2 class="carrusel__titulo">
+            <svg class="icono icono--enemigo" aria-hidden="true" focusable="false"><use href="#i-enemigo"/></svg>
+            <span>Estrategias Recomendadas</span>
+            <svg class="icono icono--enemigo" aria-hidden="true" focusable="false"><use href="#i-enemigo"/></svg>
+          </h2>
+          <div class="carrusel__ventana">
+            <div class="carrusel__pista">
+              <article class="diapositiva">
+                <img class="diapositiva__fondo" src="assets/img/estrategia-melee-con-soportes.webp" alt="Estrategia Melee con Soportes: captura de una partida contra un jefe, mazos recomendados y héroes Spectre y Yasuke">
+                <h3 class="diapositiva__titulo">Melee con Soportes</h3>
+                <p class="diapositiva__mazos">Mazos recomendados:</p>
+                <div class="diapositiva__texto">
+                  <p>Usualmente, los heroes melee tienen un límite de colocación muy alto, es por eso que a veces suelen usarse uno o dos acompañados de soportes cruciales para acabar con los jefes bastante rápido.</p>
+                  <p>Esta es una estrategia muy usada para jugar en solitario, con variantes con chef para usuarios más primerizos o con yasuke para los más avanzados, aunque el que convenga más depende del mapa y tu preferencia.</p>
+                </div>
+              </article>
+              <article class="diapositiva">
+                <img class="diapositiva__fondo" src="assets/img/estrategia-mixto-rango-melee.webp" alt="Estrategia Mixto Rango Melee: captura de una partida, mazos recomendados y héroes Wizard y Hot Dog Frank">
+                <h3 class="diapositiva__titulo">Mixto Rango Melee</h3>
+                <p class="diapositiva__mazos">Mazos recomendados:</p>
+                <div class="diapositiva__texto">
+                  <p>Al ser tan versatiles, los heroes de rango encajan bien en casi cualquier circunstancia, sin embargo, a veces se quedan cortos frente a algunos enemigos.</p>
+                  <p>Por ejemplo, el mago es bastante bueno frente a la mayoría de jefes, pero queda corto ante hordas grandes de enemigos; es por eso que se pueden acompañar tanto con melees o soportes para crear un equilibrio entre control y desgaste devastador.</p>
+                </div>
+              </article>
+              <article class="diapositiva">
+                <img class="diapositiva__fondo" src="assets/img/estrategia-buzzer-invocadores.webp" alt="Estrategia Buzzer e Invocadores: captura de una partida, mazos recomendados y el héroe Buzzer">
+                <h3 class="diapositiva__titulo">Buzzer e Invocadores</h3>
+                <p class="diapositiva__mazos">Mazos recomendados:</p>
+                <div class="diapositiva__texto">
+                  <p>Buzzer es un heroe muy peculiar, pues su habilidad especial permite otorgar explosiones a todas las invocaciones que generan muchísimo daño. Combina esto con heroes de control como Volt y empieza a acumular maná para usar habilidades como las del Discount Dog, que permite colocar aún más invocadores.</p>
+                  <p>Una de las estrategias más caóticas y por eso es de las más divertidas de jugar.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+
+          <div class="carrusel__puntos">
+            <label for="estrategia-1" class="punto punto--1"><span class="oculto">Estrategia 1</span></label>
+            <label for="estrategia-2" class="punto punto--2"><span class="oculto">Estrategia 2</span></label>
+            <label for="estrategia-3" class="punto punto--3"><span class="oculto">Estrategia 3</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Estrategias movil -->
+      <div class="lienzo estrategias-movil solo-movil">
+        <h2 class="estrategias-movil__titulo">
+          <svg class="icono icono--enemigo" aria-hidden="true" focusable="false"><use href="#i-enemigo"/></svg>
+          <span>Estrategias Recomendadas</span>
+          <svg class="icono icono--enemigo" aria-hidden="true" focusable="false"><use href="#i-enemigo"/></svg>
+        </h2>
+
+        <article class="lienzo estrategia estrategia--1">
+          <div class="estrategia__fondo" aria-hidden="true"><img src="assets/img/estrategia-fondo-circo.webp" alt="Fondo desenfocado de un mapa de circo nocturno"></div>
+          <h3 class="estrategia__titulo">Melee con Soportes</h3>
+          <div class="estrategia__captura">
+            <div class="recorte c1"><img src="assets/img/estrategia-captura-jefe.webp" alt="Captura de una partida contra un jefe"></div>
+          </div>
+          <div class="estrategia__heroe h1 recorte"><img src="assets/img/heroe-spectre.webp" alt="Héroe de soporte Spectre: demonio blanco tocando una guitarra eléctrica roja"></div>
+          <div class="estrategia__heroe h2 recorte"><img src="assets/img/clase-melee-yasuke.webp" alt="Héroe melee Yasuke: guerrera con cuernos, alas de murciélago y una sierra"></div>
+          <div class="estrategia__texto">
+            <p>Usualmente, los heroes melee tienen un límite de colocación muy alto, es por eso que a veces suelen usarse uno o dos acompañados de soportes cruciales para acabar con los jefes bastante rápido.</p>
+            <p>Esta es una estrategia muy usada para jugar en solitario, con variantes con chef para usuarios más primerizos o con yasuke para los más avanzados, aunque el que convenga más depende del mapa y tu preferencia.</p>
+          </div>
+          <p class="estrategia__mazos">Mazos Recomendados:</p>
+          <div class="estrategia__grid" role="group" aria-label="Mazos recomendados">
+            <img src="assets/img/avatar-chef-melee.webp" alt="Avatar de Chef (melee)"><img src="assets/img/avatar-discountdog-4.webp" alt="Avatar de Discount Dog (soporte)"><img src="assets/img/avatar-lemonadecat-soporte-2.webp" alt="Avatar de Lemonade Cat (soporte)"><img src="assets/img/avatar-balloonpal-soporte-3.webp" alt="Avatar de Balloon Pal (soporte)"><img src="assets/img/avatar-spectre-soporte-5.webp" alt="Avatar de Spectre (soporte)">
+            <img src="assets/img/avatar-yasuke-melee.webp" alt="Avatar de Yasuke (melee)"><img src="assets/img/avatar-discountdog-4.webp" alt="Avatar de Discount Dog (soporte)"><img src="assets/img/avatar-lemonadecat-soporte-2.webp" alt="Avatar de Lemonade Cat (soporte)"><img src="assets/img/avatar-balloonpal-soporte-3.webp" alt="Avatar de Balloon Pal (soporte)"><img src="assets/img/avatar-spectre-soporte-2.webp" alt="Avatar de Spectre (soporte)">
+            <img src="assets/img/avatar-yasuke-melee.webp" alt="Avatar de Yasuke (melee)"><img src="assets/img/avatar-goblino-invocador-1.webp" alt="Avatar de El Goblino (invocador)"><img src="assets/img/avatar-lemonadecat-soporte-2.webp" alt="Avatar de Lemonade Cat (soporte)"><img src="assets/img/avatar-balloonpal-soporte-3.webp" alt="Avatar de Balloon Pal (soporte)"><img src="assets/img/avatar-spectre-soporte-5.webp" alt="Avatar de Spectre (soporte)">
+            <img src="assets/img/avatar-chef-melee.webp" alt="Avatar de Chef (melee)"><img src="assets/img/avatar-goblino-invocador-1.webp" alt="Avatar de El Goblino (invocador)"><img src="assets/img/avatar-discountdog-soporte-1.webp" alt="Avatar de Discount Dog (soporte)"><img src="assets/img/avatar-balloonpal-soporte-3.webp" alt="Avatar de Balloon Pal (soporte)"><img src="assets/img/avatar-spectre-soporte-5.webp" alt="Avatar de Spectre (soporte)">
+          </div>
+        </article>
+
+        <article class="lienzo estrategia estrategia--2">
+          <div class="estrategia__fondo" aria-hidden="true"><img src="assets/img/estrategia-fondo-circo.webp" alt="Fondo desenfocado de un mapa de circo nocturno"><img src="assets/img/estrategia-fondo-mapa-dream.webp" alt="Fondo desenfocado del mapa Dream"></div>
+          <h3 class="estrategia__titulo">Mixto Rango Melee</h3>
+          <div class="estrategia__captura"><img src="assets/img/estrategia-mixto-captura.webp" alt="Captura de una partida con héroes de rango y melee"></div>
+          <div class="estrategia__heroe h1 recorte"><img src="assets/img/heroe-hotdogfrank.webp" alt="Héroe melee Hot Dog Frank"></div>
+          <div class="estrategia__heroe h2 recorte"><img src="assets/img/heroe-wizard.webp" alt="Héroe Wizard: hechicera rosada con cuernos y gafas"></div>
+          <div class="estrategia__texto">
+            <p>Al ser tan versatiles, los heroes de rango encajan bien en casi cualquier circunstancia, sin embargo, a veces se quedan cortos frente a algunos enemigos.</p>
+            <p>Por ejemplo, el mago es bastante bueno frente a la mayoría de jefes, pero queda corto ante hordas grandes de enemigos; es por eso que se pueden acompañar tanto con melees o soportes para crear un equilibrio entre control y desgaste devastador.</p>
+          </div>
+          <p class="estrategia__mazos">Mazos Recomendados:</p>
+          <div class="estrategia__grid" role="group" aria-label="Mazos recomendados">
+            <img src="assets/img/avatar-hotdogfrank-melee.webp" alt="Avatar de Hot Dog Frank (melee)"><img src="assets/img/avatar-mago-rango.webp" alt="Avatar del Mago (rango)"><img src="assets/img/avatar-lemonadecat-soporte-1.webp" alt="Avatar de Lemonade Cat (soporte)"><img src="assets/img/avatar-balloonpal-soporte-2.webp" alt="Avatar de Balloon Pal (soporte)"><img src="assets/img/avatar-spectre-soporte-4.webp" alt="Avatar de Spectre (soporte)">
+            <img src="assets/img/avatar-hotdogfrank-melee.webp" alt="Avatar de Hot Dog Frank (melee)"><img src="assets/img/avatar-mago-rango.webp" alt="Avatar del Mago (rango)"><img src="assets/img/avatar-discountdog-2.webp" alt="Avatar de Discount Dog (soporte)"><img src="assets/img/avatar-balloonpal-soporte-2.webp" alt="Avatar de Balloon Pal (soporte)"><img src="assets/img/avatar-spectre-soporte-1.webp" alt="Avatar de Spectre (soporte)">
+            <img src="assets/img/avatar-dumpsterchild-soporte.webp" alt="Avatar de Dumpster Child (soporte)"><img src="assets/img/avatar-mago-rango.webp" alt="Avatar del Mago (rango)"><img src="assets/img/avatar-goblino-invocador-2.webp" alt="Avatar de El Goblino (invocador)"><img src="assets/img/avatar-balloonpal-soporte-2.webp" alt="Avatar de Balloon Pal (soporte)"><img src="assets/img/avatar-spectre-soporte-4.webp" alt="Avatar de Spectre (soporte)">
+            <img src="assets/img/avatar-maitake-soporte.webp" alt="Avatar de Maitake (soporte)"><img src="assets/img/avatar-mago-rango.webp" alt="Avatar del Mago (rango)"><img src="assets/img/avatar-discountdog-2.webp" alt="Avatar de Discount Dog (soporte)"><img src="assets/img/avatar-balloonpal-soporte-2.webp" alt="Avatar de Balloon Pal (soporte)"><img src="assets/img/avatar-spectre-soporte-4.webp" alt="Avatar de Spectre (soporte)">
+          </div>
+        </article>
+
+        <article class="lienzo estrategia estrategia--3">
+          <div class="estrategia__fondo" aria-hidden="true"><img src="assets/img/estrategia-fondo-mapa-colmena.webp" alt="Fondo desenfocado de un mapa de panal de abejas"></div>
+          <h3 class="estrategia__titulo">Buzzer e Invocadores</h3>
+          <div class="estrategia__captura">
+            <div class="recorte c1"><img src="assets/img/estrategia-captura-jefe.webp" alt="Captura de una partida contra un jefe"></div>
+            <img class="c2" src="assets/img/estrategia-buzzer-captura.webp" alt="Captura de una partida con muchos invocadores">
+          </div>
+          <div class="estrategia__heroe h1 recorte"><img src="assets/img/clase-melee-volt.webp" alt="Héroe melee Volt: calavera luminosa dentro de una olla"></div>
+          <div class="estrategia__heroe h2 recorte"><img src="assets/img/heroe-buzzer.webp" alt="Héroe invocador Buzzer: con forma de colmena de abejas"></div>
+          <div class="estrategia__texto">
+            <p>Buzzer es un heroe muy peculiar, pues su habilidad especial permite otorgar explosiones a todas las invocaciones que generan muchísimo daño. Combina esto con heroes de control como Volt y empieza a acumular maná para usar habilidades como las del Discount Dog, que permite colocar aún más invocadores. ¡Caos sin límites!</p>
+            <p>Una de las estrategias más caóticas y por eso es de las más divertidas de jugar.</p>
+          </div>
+          <p class="estrategia__mazos">Mazos Recomendados:</p>
+          <div class="estrategia__grid" role="group" aria-label="Mazos recomendados">
+            <img src="assets/img/avatar-buzzer-invocador-1.webp" alt="Avatar de Buzzer (invocador)"><img src="assets/img/avatar-discountdog-3.webp" alt="Avatar de Discount Dog (soporte)"><img src="assets/img/avatar-slimeking-invocador-3.webp" alt="Avatar de Slime King (invocador)"><img src="assets/img/avatar-kartkid-invocador.webp" alt="Avatar de Kart Kid (invocador)"><img src="assets/img/avatar-spectre-soporte-5.webp" alt="Avatar de Spectre (soporte)">
+            <img src="assets/img/avatar-buzzer-invocador-2.webp" alt="Avatar de Buzzer (invocador)"><img src="assets/img/avatar-discountdog-2.webp" alt="Avatar de Discount Dog (soporte)"><img src="assets/img/avatar-lemonadecat-soporte-1.webp" alt="Avatar de Lemonade Cat (soporte)"><img src="assets/img/avatar-balloonpal-soporte-1.webp" alt="Avatar de Balloon Pal (soporte)"><img src="assets/img/avatar-slimeking-invocador-1.webp" alt="Avatar de Slime King (invocador)">
+            <img src="assets/img/avatar-buzzer-invocador-2.webp" alt="Avatar de Buzzer (invocador)"><img src="assets/img/avatar-volt-melee-1.webp" alt="Avatar de Volt (melee)"><img src="assets/img/avatar-slimeking-invocador-2.webp" alt="Avatar de Slime King (invocador)"><img src="assets/img/avatar-balloonpal-soporte-1.webp" alt="Avatar de Balloon Pal (soporte)"><img src="assets/img/avatar-spectre-soporte-3.webp" alt="Avatar de Spectre (soporte)">
+            <img src="assets/img/avatar-buzzer-invocador-1.webp" alt="Avatar de Buzzer (invocador)"><img src="assets/img/avatar-volt-melee-2.webp" alt="Avatar de Volt (melee)"><img src="assets/img/avatar-discountdog-3.webp" alt="Avatar de Discount Dog (soporte)"><img src="assets/img/avatar-hayes-invocador.webp" alt="Avatar de Hayes (invocador)"><img src="assets/img/avatar-spectre-soporte-5.webp" alt="Avatar de Spectre (soporte)">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- NOTICIAS -->
+    <section class="noticias" id="noticias">
+      <div class="noticias__fondo" aria-hidden="true"><img src="assets/img/noticias-fondo.webp" alt="Fondo desenfocado de un mapa nocturno"></div>
+      <div class="lienzo noticias__lienzo">
+        <div class="gato">
+          <img class="gato__imagen" src="assets/img/noticias-lemonadecat.webp" alt="Mascota de noticias: Lemonade Cat animada con chaqueta negra y una limonada">
+          <h2 class="gato__etiqueta">
+            <img class="gato__brillo" src="assets/img/noticias-etiqueta-brillo.svg" alt="" aria-hidden="true">
+            <img class="gato__brillo-movil" src="assets/img/noticias-etiqueta-brillo-movil.svg" alt="" aria-hidden="true">
+            <svg class="icono icono--logro gato__icono" aria-hidden="true" focusable="false"><use href="#i-logro"/></svg>
+            <span>NOTICIAS</span>
+            <svg class="icono icono--logro gato__icono" aria-hidden="true" focusable="false"><use href="#i-logro"/></svg>
+          </h2>
+        </div>
+
+        <div class="noticias__lista">
+          <article class="noticia noticia--1">
+            <div class="noticia__fondo recorte"><img src="assets/img/noticia-halloween-fondo.webp" alt="Fondo desenfocado de Halloween"></div>
+            <div class="noticia__imagen recorte"><img src="assets/img/noticia-halloween-hayes.webp" alt="Hayes, el espantapájaros del evento de Halloween"></div>
+            <div class="noticia__texto">
+              <h3>¡Halloween!</h3>
+              <p>El evento de Halloween ya está aquí e incluye todo el contenido de eventos pasados, mapas, skins y contratos tanto viejos como nuevos, no te pierdas de todo lo que trae.</p>
+            </div>
+            <button class="boton" type="button">Ver Más</button>
+          </article>
+          <article class="noticia noticia--2">
+            <div class="noticia__fondo recorte"><img src="assets/img/noticia-thanksgiving-fondo.webp" alt="Fondo desenfocado con un pavo de Thanksgiving"></div>
+            <div class="noticia__imagen recorte"><img src="assets/img/noticia-thanksgiving-peregrino.webp" alt="Peregrino con sombrero negro y una gran pluma del evento de Thanksgiving"></div>
+            <div class="noticia__texto">
+              <h3>¡Thanksgiving!</h3>
+              <p>El evento semanal de acción de gracias vuelve tras un año, y con muchas sorpresas inesperadas, el codigo <strong>thxgiving</strong> vuelve tras 5 años. ¡aprovéchalo mientras esté activo!</p>
+            </div>
+            <button class="boton" type="button">Ver Más</button>
+          </article>
+          <article class="noticia noticia--3">
+            <div class="noticia__fondo">
+              <img class="solo-escritorio" src="assets/img/noticia-the-dweller-fondo.webp" alt="Fondo desenfocado del mapa Lush Labyrinth">
+              <img class="solo-movil" src="assets/img/noticia-the-dweller-fondo-movil.webp" alt="Fondo desenfocado del mapa Lush Labyrinth">
+            </div>
+            <div class="noticia__imagen recorte"><img src="assets/img/noticia-the-dweller.webp" alt="The Dweller, criatura esquelética con máscara de espirales"></div>
+            <div class="noticia__texto">
+              <h3>The Dweller</h3>
+              <p>The Dweller (en español El Morador) es el último contrato de halloween de 2026, trayendo un nuevo mapa llamado <strong>Lush Labyrinth</strong>, que se quedará en el juego a partir de finales de noviembre.</p>
+            </div>
+            <button class="boton" type="button">Ver Más</button>
+          </article>
+        </div>
+
+        <div class="noticias__colinas" aria-hidden="true">
+          <img class="colina colina--16" src="assets/img/noticias-colina-1.svg" alt="">
+          <img class="colina colina--15" src="assets/img/noticias-colina-2.svg" alt="">
+          <img class="colina colina--14 solo-escritorio" src="assets/img/noticias-colina-3.svg" alt="">
+          <img class="colina colina--14 solo-movil" src="assets/img/noticias-colina-3-movil.svg" alt="">
+          <svg class="icono icono--torre torre-colina torre-colina--grande" aria-hidden="true" focusable="false"><use href="#i-torre"/></svg>
+          <svg class="icono icono--torre torre-colina torre-colina--peque solo-escritorio" aria-hidden="true" focusable="false"><use href="#i-torre"/></svg>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="pie">
+    <img class="pie__fondo solo-escritorio" src="assets/img/pie-fondo.svg" alt="" aria-hidden="true">
+    <img class="pie__fondo solo-movil" src="assets/img/pie-fondo-movil.svg" alt="" aria-hidden="true">
+    <div class="lienzo pie__lienzo">
+      <img class="pie__logo" src="assets/img/logo-tower-heroes.webp" alt="Logotipo de Tower Heroes">
+
+      <!-- Cuando tengas los enlaces reales, cambia cada <div class="pie__bloque ..."> por <a class="pie__bloque ..." href="URL"> -->
+      <div class="pie__bloque pie__bloque--roblox">
+        <span class="roblox" aria-hidden="true"><span class="roblox__cuadro"></span><span class="roblox__centro"></span></span>
+        <span class="pie__texto">
+          <strong class="pie__titulo">¡Juega Ahora!</strong>
+          <span>Tower Heroes está disponible para pc, móvil y consolas en la plataforma de juego <b>ROBLOX</b> descárgalo y empieza a jugar.</span>
+        </span>
+      </div>
+      <div class="pie__bloque pie__bloque--discord">
+        <span class="pie__icono pie__icono--discord" aria-hidden="true"><img aria-hidden="true" src="assets/img/icono-discord.webp" alt="Ícono de Discord"></span>
+        <span class="pie__texto">
+          <strong class="pie__titulo">Discord Oficial</strong>
+          <span>Puedes encontrar el servidor de discord oficial de Tower Heroes y Pixel-Bit Studio donde puedes estar al tanto de actualizaciones.</span>
+        </span>
+      </div>
+      <div class="pie__bloque pie__bloque--compartir">
+        <span class="pie__icono pie__icono--compartir" aria-hidden="true"><img aria-hidden="true" src="assets/img/icono-compartir.webp" alt="Ícono de compartir"></span>
+        <span class="pie__texto">
+          <strong class="pie__titulo">¡Comparte!</strong>
+          <span>Si esta página te está gustando, compártela con todos tus amigos para recibir más actualizaciones para la comunidad en español.</span>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
