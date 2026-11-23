@@ -623,15 +623,15 @@ html { scroll-padding-top: 86px; }
   color: #fff;
 }
 .noticia__fondo { position: absolute; inset: 0; }
-.noticia__fondo > img { position: absolute; }
-.noticia--1 .noticia__fondo > img { left: -70.78%; top: -5.52%; width: 241.56%; height: 108.09%; }
-.noticia--2 .noticia__fondo > img { left: -31.76%; top: -3.83%; width: 163.52%; height: 107.72%; }
-.noticia--3 .noticia__fondo > img { inset: 0; width: 100%; height: 100%; }
-
 .noticia__imagen { position: relative; height: calc(204 * var(--u)); border-radius: calc(4 * var(--u)); }
-.noticia--1 .noticia__imagen > img { left: 0.08%; top: 0.08%; width: 100%; height: 133.33%; }
-.noticia--2 .noticia__imagen > img { left: -6.62%; top: -9.41%; width: 106.62%; height: 149.49%; }
-.noticia--3 .noticia__imagen > img { left: 0.08%; top: -16.67%; width: 100%; height: 133.33%; }
+
+/* Las imágenes llenan su caja con object-fit: cover, así nunca se estiran ni se aplastan
+   aunque la tarjeta cambie de tamaño. object-position elige qué parte de la imagen se ve. */
+.noticia__fondo > img,
+.noticia__imagen > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.noticia--3 .noticia__fondo > img   { object-position: 50% 100%; }
+.noticia--1 .noticia__imagen > img  { object-position: 50% 0%; }
+.noticia--2 .noticia__imagen > img  { object-position: 100% 19%; }
 
 .noticia__texto {
   position: relative; flex: 1;
