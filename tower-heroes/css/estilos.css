@@ -129,7 +129,7 @@ strong, b { font-weight: 700; }
 }
 .menu-boton { color: #fff; }
 .menu-boton .icono { width: calc(var(--w) * 1px); }
-.menu-boton:hover, .menu-boton:focus-visible, .menu-boton--cerrar { background: var(--azul-500); }
+.menu-boton:hover, .menu-boton:focus-visible, .menu-boton--cerrar { background: var(--azul-500); color: var(--azul-900); }
 .menu-boton:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
 .menu-boton--cerrar { display: none; }
 
@@ -166,7 +166,8 @@ html { scroll-padding-top: 86px; }
   width: calc(var(--w) * 1px);
   margin-right: calc((9 + (33 - var(--w)) / 2) * 1px);
 }
-.boton-icono:hover, .boton-icono:focus-visible { background: var(--azul-500); }
+/* Hover: fondo claro + texto e ícono en el tono más oscuro del mismo color (contraste) */
+.boton-icono:hover, .boton-icono:focus-visible { background: var(--azul-500); color: var(--azul-900); }
 .boton-icono:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
 
 @media (min-width: 1200px) {
@@ -583,9 +584,7 @@ html { scroll-padding-top: 86px; }
   html { scroll-behavior: auto; }
 }
 
-/* =========================================================
-   NOTICIAS
-   ========================================================= */
+/* NOTICIAS */
 .noticias { position: relative; z-index: 1; overflow: hidden; background: #111; }
 .noticias__fondo { position: absolute; inset: 0; overflow: hidden; }
 .noticias__fondo img { position: absolute; max-width: none; left: -404.26%; top: -9.66%; width: 1188.45%; height: 115.6%; }
@@ -595,6 +594,7 @@ html { scroll-padding-top: 86px; }
 .gato { position: absolute; left: calc(10 * var(--u)); top: 0; width: calc(374 * var(--u)); height: calc(438 * var(--u)); }
 .gato__imagen { position: absolute; left: 11.36%; top: calc(58 * var(--u)); width: 76.99%; height: auto; aspect-ratio: 1; }
 .gato__etiqueta {
+ 
   position: absolute; left: 9.89%; right: 10.16%; top: 74.48%; bottom: 6.79%;
   display: flex; align-items: center; justify-content: center; gap: calc(6 * var(--u));
   border-radius: calc(32 * var(--u));
@@ -653,7 +653,7 @@ html { scroll-padding-top: 86px; }
   font-family: "Cal Sans", sans-serif; font-size: max(14px, calc(18 * var(--u)));
   transition: background-color .2s;
 }
-.boton:hover, .boton:focus-visible { background: var(--azul-500); }
+.boton:hover, .boton:focus-visible { background: var(--azul-500); color: var(--azul-900); }
 .boton:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
 
 .noticias__colinas > * { position: absolute; max-width: none; }
